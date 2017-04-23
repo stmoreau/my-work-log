@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}?????????????????
+  h1 My Work Logs
+  div#work-entry-form(rel="js-work-entry-form")
+    span="Project: "
+    select#select-project(rel="js-select-project")
+    br
+    span="Work Description: "
+    input#work-description(rel="js-work-description" size="25" maxlength="50" autofocus)
+    span=" (at least 5 characters)"
+    br
+    span="Minutes: "
+    input#work-time(rel="js-work-time" size="4" maxlength="3")
+    span=" (0-600)"
+    br
+    button#submit-work-entry(rel="js-submit-work-entry")="submit"
+  hr
+  h2.total-work-time(rel="js-total-work-time")
+  hr
+  div#project-list(rel="js-project-list")
