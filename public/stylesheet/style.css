@@ -33,16 +33,16 @@
   right: 5px;
 }
 .project-entry > .work-entries {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 .project-entry > .work-entries > .work-entry {
-  margin: 0px;
+  margin: 0;
   margin-top: 10px;
 }
 .project-entry > .work-entries > .work-entry:first-child {
-  margin-top: 0px;
+  margin-top: 0;
 }
 .project-entry > .work-entries > .work-entry > .work-time {
   display: inline-block;
