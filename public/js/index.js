@@ -25,7 +25,7 @@ var Helpers = {
 	formatTime(time) {
 		var hours = Math.floor(time / 60);
 		var minutes = time % 60;
-		if (hours == 0 && minutes == 0) return "";
+		if (hours === 0 && minutes === 0) return "";
 		if (minutes < 10) minutes = `0${minutes}`;
 		return `${hours}:${minutes}`;
 	}
@@ -256,7 +256,7 @@ var Project = {
 		// find where the entry sits in the new sorted list
 		var entryIdx;
 		for (let i = 0; i < this.work.length; i++) {
-			if (this.work[i].id == workEntryId) {
+			if (this.work[i].id === workEntryId) {
 				entryIdx = i;
 				break;
 			}
