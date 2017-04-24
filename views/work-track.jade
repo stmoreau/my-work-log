@@ -2,10 +2,11 @@ extends layout
 
 block content
   h1 My Work Logs
+  a(href="/")="back"
   div#work-entry-form(rel="js-work-entry-form")
     span#error.js-error(rel="js-error")
     br
-    span="Project:  "
+    span="Project: "
     select#select-project(rel="js-select-project")
     br
     span="Work Description: "
@@ -21,3 +22,5 @@ block content
   h2.total-work-time(rel="js-total-work-time")
   hr
   div#project-list(rel="js-project-list")
+  script(src="js/jquery.js")
+  script(src="js/index.js")
