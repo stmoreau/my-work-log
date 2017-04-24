@@ -4,6 +4,10 @@
 #work-entry-form button {
   font-size: 20px;
 }
+.js-error{
+  color: #ff0000;
+  font-size: 24px;
+}
 .project-entry,
 .project-entry > .work-time,
 .total-work-time {

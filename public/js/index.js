@@ -47,6 +47,7 @@ var UI = Object.assign(Object.create(Helpers),{
 		this.$workEntryForm = $("[rel*=js-work-entry-form");
 		this.$workEntrySelectProject = this.$workEntryForm.find("[rel*=js-select-project]");
 		this.$workEntryDescription = this.$workEntryForm.find("[rel*=js-work-description]");
+		this.$errorWhenPassedWrongData = this.$workEntryForm.find("[rel*=js-error]");
 		this.$workEntryTime = this.$workEntryForm.find("[rel*=js-work-time]");
 		this.$workEntrySubmit = this.$workEntryForm.find("[rel*=js-submit-work-entry]");
 		this.$totalTime = $("[rel*=js-total-work-time]");
@@ -61,11 +62,12 @@ var UI = Object.assign(Object.create(Helpers),{
 		var minutes = this.$workEntryTime.val();
 
 		if (!this.validateWorkEntry(description,minutes)) {
-			alert("Oops, bad entry. Try again.");
+			this.$errorWhenPassedWrongData.text("Oops, bad entry. Try again.");
 			this.$workEntryDescription[0].focus();
 			return;
 		}
 
+		this.$errorWhenPassedWrongData.text("");
 		this.$workEntryDescription.val("");
 		this.$workEntryTime.val("");
 		this.addWorkToProject(Number(projectId),description,Number(minutes));
